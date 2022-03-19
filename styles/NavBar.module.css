@@ -1,0 +1,27 @@
+.svg {
+  width: 50px;
+}
+
+.container {
+  z-index: 5;
+  position: fixed;
+  background-color: white;
+  height: 70px;
+  width: 100vw;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.container h3 {
+  font-size: 1.5rem;
+}
+
+.containerLeft, .containerRight {
+  gap: .5rem;
+  display: flex;
+  flex-direction: row;
+}

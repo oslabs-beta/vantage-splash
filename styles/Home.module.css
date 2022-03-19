@@ -1,15 +1,24 @@
 .container {
-  padding: 0 2rem;
+  width: 100%;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.headerContainer {
+  margin: 0 2rem;
+  display: grid;
   align-items: center;
+  gap: 2rem;
+  grid-template-columns: 430px minmax(400px, 1fr);
+  height: 400px;
 }
 
 .footer {
@@ -45,6 +54,10 @@
   font-size: 4rem;
 }
 
+.title span {
+  color: #7100f3;
+}
+
 .title,
 .description {
   text-align: center;
@@ -63,6 +76,10 @@
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.terminalContainer {
+  min-height: 3rem !important;
 }
 
 .grid {

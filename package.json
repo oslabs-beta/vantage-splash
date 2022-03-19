@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "evergreen-ui": "^6.9.3",
+    "framer-motion": "^6.2.8",
     "next": "12.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-window-ui": "^2.2.0",
+    "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
