@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../styles/TeamCard.module.css";
 import { FaLinkedin } from "react-icons/fa";
-import { AiOutlineGithub } from "react-icons/Ai";
+import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 interface CardProps {
@@ -37,7 +37,7 @@ const TeamCard = ({ name, src, linkedIn, github }: CardProps) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <AiOutlineGithub />
+          <FaGithub />
         </motion.a>
       </div>
     </div>

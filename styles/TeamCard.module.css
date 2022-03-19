@@ -4,8 +4,8 @@
   flex-direction: column;
   display: flex;
   align-items: center;
-  gap: 1px;
-  background-color: rgb(254, 232, 255);
+  gap: 2px;
+  background-color: #ca95ff74;
   flex-wrap: wrap;
 }
 
