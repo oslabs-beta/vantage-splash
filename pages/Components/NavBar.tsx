@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../styles/NavBar.module.css";
 import LogoSVG from "./LogoSVG";
 import { Button } from "evergreen-ui";
+import Link from "next/link";
 
 const NavBar = () => {
   return (
@@ -14,7 +15,7 @@ const NavBar = () => {
       <div className={styles.containerRight}>
         <Button>Docs</Button>
         <Button>Github</Button>
-        <Button appearance="primary">Example</Button>
+        <Button appearance="primary"><Link href='/vantage_report_sample.html'><a>Example</a></Link></Button>
       </div>
     </div>
   );
