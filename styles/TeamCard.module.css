@@ -1,0 +1,30 @@
+.container {
+  padding: 15px 8px;
+  border-radius: 1rem;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background-color: hsl(269, 100%, 88%);
+  flex-wrap: wrap;
+}
+
+.pic {
+  border-radius: 1rem;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.links {
+  margin-top: 3px;
+  display: flex;
+  justify-content: center;
+  gap: 1ch;
+}
+
+.links a {
+  font-size: 2rem;
+}

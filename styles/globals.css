@@ -1,5 +1,10 @@
+:root {
+  --main: color: #7100f3;
+}
+
 html,
 body {
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -17,4 +22,24 @@ a {
 
 .parentContainer {
   padding-top: 70px;
+  margin: 0 10px;
+}
+
+.globalFooter {
+  font-size: .8rem;
+  margin-top: 20px;
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+  border-top: 1px solid #eaeaea;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px 0;
+  /* transform: translateX(-10%); */
 }
