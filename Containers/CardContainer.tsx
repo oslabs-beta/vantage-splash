@@ -1,5 +1,5 @@
 import TeamCard from "../Components/TeamCard";
-import styles from "../../styles/CardContainer.module.css";
+import styles from "../styles/CardContainer.module.css";
 import { motion, Variants } from "framer-motion";
 
 const CardContainer = () => {

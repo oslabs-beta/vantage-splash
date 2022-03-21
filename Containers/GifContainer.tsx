@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import styles from "../../styles/GifContainer.module.css";
+import styles from "../styles/GifContainer.module.css";
 import { motion } from "framer-motion";
 
 const GifContainer = () => {

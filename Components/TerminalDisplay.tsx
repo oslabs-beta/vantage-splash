@@ -1,7 +1,7 @@
 import React from "react";
 import { Browser } from "react-window-ui";
 import Typewriter from "typewriter-effect";
-import styles from "../../styles/Terminal.module.css";
+import styles from "../styles/Terminal.module.css";
 
 interface TerminalProps {
   command: string;

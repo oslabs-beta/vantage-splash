@@ -1,12 +1,12 @@
-import TerminalDisplay from "./Components/TerminalDisplay";
+import TerminalDisplay from "../Components/TerminalDisplay";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { motion, useViewportScroll } from "framer-motion";
-import CardContainer from "./Containers/CardContainer";
-import GifContainer from "./Containers/GifContainer";
-import Features from "./Components/Features";
+import CardContainer from "../Containers/CardContainer";
+import GifContainer from "../Containers/GifContainer";
+import Features from "../Components/Features";
 
 const Home: NextPage = () => {
   return (

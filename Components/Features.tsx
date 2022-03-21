@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/Features.module.css";
+import styles from "../styles/Features.module.css";
 import { BsFillCheckSquareFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 

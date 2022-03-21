@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../../styles/NavBar.module.css";
+import styles from "../styles/NavBar.module.css";
 import LogoSVG from "./LogoSVG";
 import { Button } from "evergreen-ui";
 import Link from "next/link";
