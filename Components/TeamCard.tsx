@@ -16,7 +16,7 @@ interface CardProps {
 const TeamCard = ({ name, src, linkedIn, github, index }: CardProps) => {
   const cardVariants: Variants = {
     offscreen: {
-      x: 1000,
+      x: 1500,
     },
     onscreen: {
       x: 0,
@@ -33,6 +33,7 @@ const TeamCard = ({ name, src, linkedIn, github, index }: CardProps) => {
     <motion.div
       variants={cardVariants}
       className={styles.container}
+      whileHover={{ boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)" }}
     >
       <Image
         className={styles.pic}

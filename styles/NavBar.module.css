@@ -25,3 +25,9 @@
   display: flex;
   flex-direction: row;
 }
+
+@media only screen and (max-width: 475px) {
+  .container h3 {
+    display: none;
+  }
+}

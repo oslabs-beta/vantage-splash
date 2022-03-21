@@ -44,7 +44,7 @@ const Home: NextPage = () => {
         </div>
         <Features />
         <TerminalDisplay
-          command='npm install vantage-next --save-dev'
+          command='npm i vantage-next --save-dev'
           desc='Get started easily with npm and instantly start monitoring web vitals with each new commit'
         />
         <div>

@@ -11,7 +11,7 @@ const GifContainer = () => {
       onClick={(_) => setSection(i)}
       className={styles.section}
       initial={{ backgroundColor: "#ffffff" }}
-      animate={{ backgroundColor: section === i ? '#ca95ff74' : "#ffffff" }}
+      animate={{ backgroundColor: section === i ? '#EDE7F6' : "#ffffff" }}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.95 }}
     >

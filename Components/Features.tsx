@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "../styles/Features.module.css";
 import { BsFillCheckSquareFill } from "react-icons/bs";
+import { BiGitBranch } from "react-icons/bi";
+import { MdOutlinePublishedWithChanges } from "react-icons/md";
+import { FaFeatherAlt } from "react-icons/fa";
+
 import { motion } from "framer-motion";
 
 const Features = () => {
@@ -33,25 +37,25 @@ const Features = () => {
 
 const cardData = [
   {
-    title: "Sub Title",
-    desc: "This is a much longer description solely used for testing purposes, but it had to be the general length",
-    icon: <BsFillCheckSquareFill />,
-    color: "blue",
-    backgroundColor: "lightBlue",
+    title: "Git integrations",
+    desc: "Hands-free data capture:  Runs in the background as you commit, so it's quick and easy to review data over time",
+    icon: <BiGitBranch />,
+    color: "2096F3",
+    backgroundColor: "#E3F2FD",
   },
   {
-    title: "Sub Title",
-    desc: "This is a much longer description solely used for testing purposes, but it had to be the general length",
-    icon: <BsFillCheckSquareFill />,
-    color: "blue",
-    backgroundColor: "lightBlue",
+    title: "Comparisons",
+    desc: "Clear comparisons:  See exactly which recommendations changed, and how your updates have directly influenced specific metrics",
+    icon: <MdOutlinePublishedWithChanges />,
+    color: "#673AB6",
+    backgroundColor: "#EDE7F6",
   },
   {
-    title: "Sub Title",
+    title: "Lightweight",
     desc: "This is a much longer description solely used for testing purposes, but it had to be the general length",
-    icon: <BsFillCheckSquareFill />,
-    color: "blue",
-    backgroundColor: "lightBlue",
+    icon: <FaFeatherAlt />,
+    color: "#00C852",
+    backgroundColor: "#B9F6C9",
   },
 ];
 

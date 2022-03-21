@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   gap: 2px;
-  background-color: hsl(269, 100%, 88%);
+  background-color: #EDE7F6;
   flex-wrap: wrap;
 }
 
