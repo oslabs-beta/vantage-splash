@@ -3,18 +3,37 @@ import Image from "next/image";
 import styles from "../../styles/TeamCard.module.css";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface CardProps {
   name: string;
   src: string;
   linkedIn: string;
   github: string;
+  index: number;
 }
 
-const TeamCard = ({ name, src, linkedIn, github }: CardProps) => {
+const TeamCard = ({ name, src, linkedIn, github, index }: CardProps) => {
+  const cardVariants: Variants = {
+    offscreen: {
+      x: 1000,
+    },
+    onscreen: {
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.6,
+        delay: 0.1 * index
+      }
+    },
+  };
+
   return (
-    <div className={styles.container}>
+    <motion.div
+      variants={cardVariants}
+      className={styles.container}
+    >
       <Image
         className={styles.pic}
         src={src}
@@ -30,7 +49,7 @@ const TeamCard = ({ name, src, linkedIn, github }: CardProps) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <FaLinkedin fill="#0072b1"/>
+          <FaLinkedin fill='#0072b1' />
         </motion.a>
         <motion.a
           href={github}
@@ -40,7 +59,7 @@ const TeamCard = ({ name, src, linkedIn, github }: CardProps) => {
           <FaGithub />
         </motion.a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

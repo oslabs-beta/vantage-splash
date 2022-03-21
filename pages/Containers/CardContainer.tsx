@@ -1,13 +1,20 @@
 import TeamCard from "../Components/TeamCard";
 import styles from "../../styles/CardContainer.module.css";
+import { motion, Variants } from "framer-motion";
 
 const CardContainer = () => {
+  
   return (
-    <div className={styles.container}>
+    <motion.div
+      className={styles.container}
+      initial='offscreen'
+      whileInView='onscreen'
+      viewport={{ once: true, amount: 0.8 }}
+    >
       {data.map((cur, i) => (
-        <TeamCard key={i} {...cur} />
+        <TeamCard key={i} {...cur} index={i} />
       ))}
-    </div>
+    </motion.div>
   );
 };
 

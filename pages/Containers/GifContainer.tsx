@@ -28,6 +28,7 @@ const GifContainer = () => {
     >
       {section === i && (
         <Image
+          priority={i===0 ? true : false}
           className={styles.image}
           src={url}
           width={474}

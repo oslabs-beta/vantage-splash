@@ -29,22 +29,6 @@
   }
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -86,18 +70,9 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.cardContainer > span {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 20px 0;
-  transform: translateX(-10%);
-}
-
-@media only screen and (max-width: 1000px) {
-  .cardContainer > span {
+/* @media only screen and (max-width: 1000px) {
+  .cardContainer > h4 {
     transform: translateX(0%);
   }
-}
+} */
 

@@ -3,7 +3,7 @@
   display: grid;
   align-items: center;
   gap: 2rem;
-  grid-template-columns: 430px minmax(400px, 1fr);
+  grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
 }
 
 .terminalContainer {
