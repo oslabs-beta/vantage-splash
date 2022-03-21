@@ -1,12 +1,11 @@
+import TerminalDisplay from "./Components/TerminalDisplay";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
-// import { Browser } from "react-window-ui";
-import { Browser, MacTerminal } from "react-window-ui";
-import Typewriter from "typewriter-effect";
 import CardContainer from "./Containers/CardContainer";
+import GifContainer from "./Containers/GifContainer";
 
 const Home: NextPage = () => {
   return (
@@ -35,31 +34,23 @@ const Home: NextPage = () => {
               width={1006}
               height={601}
               layout='intrinsic'
-              className={styles.screenshot1}
+              priority
+              // className={styles.screenshot1}
               src='/screenshot1.png'
               alt='Screenshot of Vantage'
             />
           </motion.div>
         </div>
-        <div className={styles.headerContainer}>
-          <Browser background='lightgray' className={styles.terminalContainer}>
-            <pre>
-              <code>
-                <Typewriter
-                  options={{
-                    strings: ["npm install vantage-next --save-dev"],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </code>
-            </pre>
-          </Browser>
-          <div>
-            Easily install with npm and instantly start monitoring web vitals
-            with each new commit
-          </div>
-        </div>
+        <TerminalDisplay
+          command='npm install vantage-next --save-dev'
+          desc='Easily install with npm and instantly start monitoring web vitals with
+        each new commit'
+        />
+        {/* <TerminalDisplay
+          command='npx vantage'
+          desc='Quickly view SEO stats'
+        /> */}
+        <GifContainer />
         <div className={styles.cardContainer}>
           <span>Meet the team!</span>
           <CardContainer />

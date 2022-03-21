@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
+  grid-gap: 10px
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.section {
+  border: 1px solid lightgray;
+  border-radius: .5rem;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.image {
+  border-radius: .5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* .imageContainer {
+  width: 40vw;
+  position: relative;
+} */
