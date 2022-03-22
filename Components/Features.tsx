@@ -12,9 +12,7 @@ const Features = () => {
     <div className={styles.container}>
       <h4>What does Vantage have to offer?</h4>
       <span>
-        Unlike other serverless monitoring tools, Shepherd is free-to-use and
-        open-source. Manage your Lambda functions in real time and pull valuable
-        insights with your customizable Lambda dashboard.
+        Unlike other SEO monitoring tools, Vantage is free-to-use and open-source. Measure your key web vitals in the background while you work and track any improvements you&apos;ve made over time.
       </span>
       <div className={styles.cardContainer}>
         {cardData.map(({ title, desc, icon, color, backgroundColor }, i) => (
@@ -53,7 +51,7 @@ const cardData = [
   },
   {
     title: "Lightweight",
-    desc: "This is a much longer description solely used for testing purposes, but it had to be the general length",
+    desc: "Designed from the ground up to be easy to incorporate into a project with as little configuration possible",
     icon: <FaFeatherAlt />,
     color: "#00C852",
     backgroundColor: "#B9F6C9",

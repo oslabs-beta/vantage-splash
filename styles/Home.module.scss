@@ -22,6 +22,10 @@
   grid-template-columns: 430px minmax(400px, 1fr);
 }
 
+.headerContainer img {
+  border-radius: .5rem;
+}
+
 @media only screen and (max-width: 1000px) {
   .headerContainer {
     display: grid;
