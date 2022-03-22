@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Features.module.css";
+import styles from "../styles/Features.module.scss";
 import { BsFillCheckSquareFill } from "react-icons/bs";
 import { BiGitBranch } from "react-icons/bi";
 import { MdOutlinePublishedWithChanges } from "react-icons/md";
@@ -21,7 +21,8 @@ const Features = () => {
           <motion.div
             key={i}
             className={styles.card}
-            whileHover={{ boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)" }}
+            whileHover={{ boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)" }}
+            transition={{duration: '.3'}}
           >
             <div className={styles.iconContainer} style={{ backgroundColor }}>
               {React.cloneElement(icon, { size: 40, color })}

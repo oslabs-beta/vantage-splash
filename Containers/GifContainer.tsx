@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import styles from "../styles/GifContainer.module.css";
+import styles from "../styles/GifContainer.module.scss";
 import { motion } from "framer-motion";
 
 const GifContainer = () => {
@@ -11,9 +11,9 @@ const GifContainer = () => {
       onClick={(_) => setSection(i)}
       className={styles.section}
       initial={{ backgroundColor: "#ffffff" }}
-      animate={{ backgroundColor: section === i ? '#EDE7F6' : "#ffffff" }}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.95 }}
+      animate={{ backgroundColor: section === i ? "#EDE7F6" : "#ffffff" }}
+      whileHover={{ scale: 1.01 }}
+      whileTap={{ scale: 0.98 }}
     >
       <h3>{title}</h3>
       <p>{description}</p>
@@ -25,10 +25,11 @@ const GifContainer = () => {
       key={i}
       initial={{ opacity: 0, x: 200 }}
       animate={{ opacity: section === i ? 1 : 0, x: section === i ? 0 : 200 }}
+      transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
     >
       {section === i && (
         <Image
-          priority={i===0 ? true : false}
+          priority={i === 0 ? true : false}
           className={styles.image}
           src={url}
           width={474}

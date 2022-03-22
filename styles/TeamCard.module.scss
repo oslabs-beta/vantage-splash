@@ -1,5 +1,5 @@
 .container {
-  padding: 15px 8px;
+  padding: 15px 12px;
   border-radius: 1rem;
   flex-direction: column;
   display: flex;
@@ -14,6 +14,7 @@
 }
 
 .name {
+  margin-top: 3px;
   font-size: 1.2rem;
   font-weight: bold;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/NavBar.module.css";
+import styles from "../styles/NavBar.module.scss";
 import LogoSVG from "./LogoSVG";
 import { Button } from "evergreen-ui";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const NavBar = ({ scrollYProgress }) => {
   const [isStarted, setIsStarted] = useState(false);
   useEffect(
-    () => scrollYProgress.onChange((v) => setIsStarted(v >= 0.05)),
+    () => scrollYProgress.onChange((v) => setIsStarted(v > 0)),
     [scrollYProgress]
   );
   return (
@@ -20,7 +20,7 @@ const NavBar = ({ scrollYProgress }) => {
           : "0 0 20px rgba(0, 0, 0, 0)",
       }}
     >
-      <Link href='/' >
+      <Link href='/'>
         <a className={styles.containerLeft}>
           <LogoSVG className={styles.svg} />
           <h3>Vantage</h3>
@@ -36,7 +36,7 @@ const NavBar = ({ scrollYProgress }) => {
             <a>Example</a>
           </Link>
         </Button>
-        <Button appearance='primary'>
+        <Button appearance='purple'>
           <Link href='/docs'>
             <a>Docs</a>
           </Link>

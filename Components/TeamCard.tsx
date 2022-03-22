@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/TeamCard.module.css";
+import styles from "../styles/TeamCard.module.scss";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { motion, Variants } from "framer-motion";
@@ -22,7 +22,7 @@ const TeamCard = ({ name, src, linkedIn, github, index }: CardProps) => {
       x: 0,
       transition: {
         type: "spring",
-        bounce: 0.4,
+        bounce: 0.2,
         duration: 0.6,
         delay: 0.1 * index
       }
@@ -33,7 +33,8 @@ const TeamCard = ({ name, src, linkedIn, github, index }: CardProps) => {
     <motion.div
       variants={cardVariants}
       className={styles.container}
-      whileHover={{ boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)" }}
+      whileHover={{ boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)" }}
+      transition={{duration: '.3'}}
     >
       <Image
         className={styles.pic}

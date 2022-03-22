@@ -1,10 +1,11 @@
 import React from "react";
 import { Browser } from "react-window-ui";
 import Typewriter from "typewriter-effect";
-import styles from "../styles/Terminal.module.css";
+import styles from "../styles/Terminal.module.scss";
+
 
 interface TerminalProps {
-  command: string;
+  command: string[];
   desc: string;
 }
 
@@ -16,7 +17,7 @@ const TerminalDisplay = ({ command, desc }: TerminalProps) => {
           <code>
             <Typewriter
               options={{
-                strings: [command],
+                strings: command,
                 autoStart: true,
                 loop: true,
               }}

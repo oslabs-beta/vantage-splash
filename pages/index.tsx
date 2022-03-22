@@ -2,13 +2,15 @@ import TerminalDisplay from "../Components/TerminalDisplay";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import { motion, useViewportScroll } from "framer-motion";
 import CardContainer from "../Containers/CardContainer";
 import GifContainer from "../Containers/GifContainer";
 import Features from "../Components/Features";
+import useWindowDimensions from "../hooks/useWindowSize";
 
 const Home: NextPage = () => {
+  const { width, height } = useWindowDimensions();
   return (
     <div className={styles.container}>
       <Head>
@@ -44,7 +46,11 @@ const Home: NextPage = () => {
         </div>
         <Features />
         <TerminalDisplay
-          command='npm i vantage-next --save-dev'
+          command={
+            width === undefined || width > 450
+              ? ["npm install vantage-next --save-dev"]
+              : ["npm i -D vantage-next"]
+          }
           desc='Get started easily with npm and instantly start monitoring web vitals with each new commit'
         />
         <div>
