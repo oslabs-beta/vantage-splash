@@ -7,10 +7,10 @@ import { motion, useViewportScroll } from "framer-motion";
 import CardContainer from "../Containers/CardContainer";
 import GifContainer from "../Containers/GifContainer";
 import Features from "../Components/Features";
-import useWindowDimensions from "../hooks/useWindowSize";
+import { useMediaQuery } from '@mantine/hooks';
 
 const Home: NextPage = () => {
-  const { width, height } = useWindowDimensions();
+  const width450 = useMediaQuery('(min-width: 450px)');
   return (
     <div className={styles.container}>
       <Head>
@@ -24,14 +24,14 @@ const Home: NextPage = () => {
             className={styles.title}
             initial={{ x: -600 }}
             animate={{ x: 0 }}
+            transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
           >
             NEXTjs Optimization with <span>Vantage</span>.
           </motion.h1>
           <motion.div
             initial={{ x: 600 }}
             animate={{ x: 0 }}
-            // transition={{ ease: "easeOut", duration: 0.3 }}
-            // transition={{ type: "spring", stiffness: 200, damping: 20 }}
+            transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
           >
             <Image
               width={1006}
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         <Features />
         <TerminalDisplay
           command={
-            width === undefined || width > 450
+            width450
               ? ["npm install vantage-next --save-dev"]
               : ["npm i -D vantage-next"]
           }

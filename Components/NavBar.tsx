@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/NavBar.module.scss";
 import LogoSVG from "./LogoSVG";
-import { Button } from "evergreen-ui";
+import { Button } from "@mantine/core";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -28,15 +28,15 @@ const NavBar = ({ scrollYProgress }) => {
       </Link>
 
       <div className={styles.containerRight}>
-        <Button>
+        <Button variant='outline' color='violet'>
           <a href='https://github.com/oslabs-beta/Vantage'>Github</a>
         </Button>
-        <Button>
+        <Button variant='outline' color='violet'>
           <Link href='/vantage_report_sample.html'>
             <a>Example</a>
           </Link>
         </Button>
-        <Button appearance='purple'>
+        <Button color='violet'>
           <Link href='/docs'>
             <a>Docs</a>
           </Link>
