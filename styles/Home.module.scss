@@ -1,9 +1,15 @@
 .container {
   width: 100%;
-  margin-top: 10px;
+  overflow-x: hidden;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .main {
+  padding-top: 80px;
+  margin: 0 10vw;
   /* min-height: 100vh; */
   /* padding: 4rem 0; */
   /* flex: 1; */
@@ -20,6 +26,10 @@
   align-items: center;
   gap: 2rem;
   grid-template-columns: 430px minmax(400px, 1fr);
+}
+
+.headerContainer img {
+  border-radius: 0.5rem;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -76,3 +86,13 @@
   }
 } */
 
+.footer {
+  font-size: .8rem;
+  margin-top: 20px;
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+  border-top: 1px solid #eaeaea;
+  justify-content: flex-start;
+  align-items: center;
+}

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Browser } from "react-window-ui";
 import Typewriter from "typewriter-effect";
-import styles from "../styles/Terminal.module.css";
+import styles from "../styles/Terminal.module.scss";
+import { HiOutlineClipboardCopy } from "react-icons/hi";
+import { motion } from "framer-motion";
+import { Popover, Text } from "@mantine/core";
 
 interface TerminalProps {
   command: string;
@@ -9,9 +12,16 @@ interface TerminalProps {
 }
 
 const TerminalDisplay = ({ command, desc }: TerminalProps) => {
+  const [termHover, setTermHover] = useState(false);
+  const [copied, setCopied] = useState(false);
   return (
     <div className={styles.container}>
-      <Browser background='lightgray' className={styles.terminalContainer}>
+      <Browser
+        background='lightgray'
+        className={styles.terminalContainer}
+        onMouseOver={(_) => setTermHover(true)}
+        onMouseLeave={(_) => setTermHover(false)}
+      >
         <pre>
           <code>
             <Typewriter
@@ -23,10 +33,35 @@ const TerminalDisplay = ({ command, desc }: TerminalProps) => {
             />
           </code>
         </pre>
+        <motion.div
+          className={styles.copy}
+          animate={{ opacity: termHover ? 1 : 0 }}
+          onClick={() => {
+            setCopied(true);
+            setTimeout((_) => setCopied(false), 1000);
+            navigator.clipboard.writeText(command);
+          }}
+          // whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <Popover
+            opened={copied}
+            onClose={() => setCopied(false)}
+            target={<HiOutlineClipboardCopy size={20} />}
+            position='right'
+            placement="center"
+            transition="fade"
+            trapFocus={false}
+            withArrow
+            spacing="sm"
+          >
+            <div style={{ display: "flex" }}>
+              <Text size='sm'>Copied!</Text>
+            </div>
+          </Popover>
+        </motion.div>
       </Browser>
-      <div>
-        {desc}
-      </div>
+      <div>{desc}</div>
     </div>
   );
 };

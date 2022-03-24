@@ -1,19 +1,20 @@
 .container {
-  padding: 15px 8px;
-  border-radius: 1rem;
+  padding: 15px 12px;
+  border-radius: .5rem;
   flex-direction: column;
   display: flex;
   align-items: center;
   gap: 2px;
-  background-color: hsl(269, 100%, 88%);
+  background-color: #EDE7F6;
   flex-wrap: wrap;
 }
 
 .pic {
-  border-radius: 1rem;
+  border-radius: .5rem;
 }
 
 .name {
+  margin-top: 3px;
   font-size: 1.2rem;
   font-weight: bold;
 }
