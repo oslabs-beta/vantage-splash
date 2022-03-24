@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   margin: 0 2rem;
   display: grid;
   align-items: center;
@@ -14,6 +15,13 @@
 .terminalContainer pre {
   background-color: inherit;
   margin: 0
+}
+
+.copy {
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1000px) {

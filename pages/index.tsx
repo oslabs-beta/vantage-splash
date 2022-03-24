@@ -12,7 +12,7 @@ import NavBar from "../Components/NavBar";
 
 const Home: NextPage = () => {
   const { scrollYProgress } = useViewportScroll();
-  const width500 = useMediaQuery('(min-width: 500px)');
+  const width545 = useMediaQuery('(min-width: 545px)');
   return (
     <div className={styles.container}>
       <Head>
@@ -51,9 +51,9 @@ const Home: NextPage = () => {
         <Features />
         <TerminalDisplay
           command={
-            width500
-              ? ["npm install vantage-next --save-dev"]
-              : ["npm i -D vantage-next"]
+            width545
+              ? "npm install vantage-next --save-dev"
+              : "npm i -D vantage-next"
           }
           desc='Get started easily with npm and instantly start monitoring web vitals with each new commit'
         />
@@ -66,16 +66,9 @@ const Home: NextPage = () => {
           <CardContainer />
         </div>
       </main>
-      <footer className='globalFooter'>
+      {/* <footer className={styles.footer}>
         <span>© Vantage 2022</span>
-        {/* <Image
-            className='logo'
-            src='/favicon.png'
-            alt='Vantage Logo'
-            width={16}
-            height={16}
-          /> */}
-      </footer>
+      </footer> */}
     </div>
   );
 };
