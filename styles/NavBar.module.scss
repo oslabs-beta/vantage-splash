@@ -27,7 +27,19 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 475px) {
+.github span {
+  gap: 5px
+}
+
+.github div {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0 .5rem;
+  }
   .container h3 {
     display: none;
   }

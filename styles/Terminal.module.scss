@@ -17,9 +17,10 @@
   }
 
   .terminalContainer:first-child {
-    grid-column: 2/2;
+    grid-row: 2/2;
   }
-  .terminalContainer:first-child {
-    grid-column: 1/2;
+
+  .terminalContainer:last-child {
+    grid-row: 1/2;
   }
 }
