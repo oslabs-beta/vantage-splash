@@ -39,7 +39,7 @@ const NavBar = ({ scrollYProgress }) => {
       <Link href='/'>
         <a className={styles.containerLeft}>
           <LogoSVG className={styles.svg} />
-          <h3>Vantage</h3>
+          <div className={styles.name}>Vantage</div>
         </a>
       </Link>
 

@@ -16,8 +16,9 @@
   border-bottom: 1px solid rgb(225, 225, 225);
 }
 
-.container h3 {
-  font-size: 1.5rem;
+.name {
+  font-size: 1.7rem;
+  font-weight: 600;
 }
 
 .containerLeft, .containerRight {
@@ -36,11 +37,11 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
   .container {
     padding: 0 .5rem;
   }
-  .container h3 {
+  .name {
     display: none;
   }
 }

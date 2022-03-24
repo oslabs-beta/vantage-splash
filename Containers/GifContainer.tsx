@@ -20,7 +20,7 @@ const GifContainer = () => {
     </motion.div>
   ));
 
-  const imageComponents = gifs.map((url, i) => (
+  const imageComponents = sections.map(({gif}, i) => (
     <motion.div
       key={i}
       initial={{ opacity: 0, x: 200 }}
@@ -31,7 +31,7 @@ const GifContainer = () => {
         <Image
           priority={i === 0 ? true : false}
           className={styles.image}
-          src={url}
+          src={gif}
           width={474}
           height={246}
           layout='intrinsic'
@@ -40,6 +40,7 @@ const GifContainer = () => {
       )}
     </motion.div>
   ));
+
   return (
     <div className={styles.container}>
       <div className={styles.sectionContainer}>{sectionComponents}</div>
@@ -51,18 +52,19 @@ const GifContainer = () => {
 const sections = [
   {
     title: "This is the title",
-    description: "This is a very long description about the title",
+    description: "This is a very long description about the title, This is a very long description about the title, This is a very long description about the title, This is a very long description about the title",
+    gif: "/gif-test.gif"
   },
   {
     title: "This is the title",
-    description: "This is a very long description about the title",
+    description: "This is a very long description about the title, This is a very long description about the title, This is a very long description about the title, This is a very long description about the title",
+    gif: "/gif-test.gif"
   },
   {
     title: "This is the title",
-    description: "This is a very long description about the title",
+    description: "This is a very long description about the title, This is a very long description about the title, This is a very long description about the title, This is a very long description about the title",
+    gif: "/gif-test.gif"
   },
 ];
-
-const gifs = ["/gif-test.gif", "/gif-test.gif", "/gif-test.gif"];
 
 export default GifContainer;
