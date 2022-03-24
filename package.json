@@ -13,6 +13,7 @@
     "@mantine/hooks": "^4.0.7",
     "@mantine/next": "^4.0.7",
     "framer-motion": "^6.2.8",
+    "gray-matter": "^4.0.3",
     "next": "12.1.0",
     "nextra": "^1.1.0",
     "nextra-theme-docs": "^1.2.6",
