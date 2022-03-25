@@ -26,10 +26,10 @@ const data = [
     src: "/headshots/ari.png",
   },
   {
-    linkedIn: "https://www.linkedin.com/in/ari-shoham/",
-    github: "https://github.com/arishoham",
-    name: "Ari Shoham",
-    src: "/headshots/ari.png",
+    linkedIn: "https://www.linkedin.com/in/mnoah/",
+    github: "https://github.com/mnoah1",
+    name: "Michael Noah",
+    src: "/headshots/michael.png",
   },
   {
     linkedIn: "https://www.linkedin.com/in/ari-shoham/",
