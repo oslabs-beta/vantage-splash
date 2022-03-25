@@ -1,3 +1,26 @@
-# Troubleshooting: Git Integration
+# Git Integration
 
-### Issue: Report not generating after each commit
+## Git Hooks
+
+Vantage uses git hooks to run in the background with every commit. The post-commit hook is ued and can be found at `./git/hooks/post-commit` from the root directory of your NEXT app.
+
+When vantage is installed, it adds a post-commit script to your git hooks folder, however, if a post-commit script already exists it will not override it.
+
+## Create new post-commit
+
+To manually add the post-commit hook to your project, navigate to `./git/hooks/` and create a file named `post-commit`. 
+
+Then add the following contents to the folder:
+```
+#!/bin/sh
+npx snapshot >&- 2>&- &
+```
+Finally run `chmod u+x ./git/hooks/post-commit` in your terminal to make the post-commit file executable.
+
+## Add to existing post-commit
+
+If you already have a post-commit git hook script in use, just add the following executable to it:
+
+```
+npx snapshot >&- 2>&- &
+```

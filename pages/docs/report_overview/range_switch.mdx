@@ -1,0 +1,34 @@
+import { FiGitCommit } from "react-icons/fi";
+import { MdOutlineCompareArrows } from "react-icons/md";
+
+# Single vs Range View
+
+There are two ways to view Vantage suggestions.
+
+To switch between views, use the range switch located to the bottom right of the graph.
+
+![Range Switch](/docs/RangeSwitch.png)
+
+## Single commit view 
+
+Single commit view can be selected by choosing:
+
+<FiGitCommit size={40}/>
+
+In single commit view, Vantage will look at a single commit's data and display all of the suggestions associated with it. These are ranked in order of importance to address.
+
+If a value is associated with the suggestion, it is displayed, otherwise the score will be displayed.
+
+Click on the graph to view a different commit's data.
+
+## Range View
+
+Range view can be selected by choosing:
+
+<MdOutlineCompareArrows size={40} />
+
+In range view, Vantage will compare two commit's data and display all of the applicable suggestions. These are ranked in order of variance between the two commits. 
+
+If a value is associated with the suggestion, the difference is displayed, otherwise the score difference will be displayed.
+
+Click on two points on the graph to view a range.

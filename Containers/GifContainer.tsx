@@ -53,17 +53,17 @@ const sections = [
   {
     title: "This is the title",
     description: "This is a very long description about the title, This is a very long description about the title, This is a very long description about the title, This is a very long description about the title",
-    gif: "/gif-test.gif"
+    gif: "/splash/gif-test.gif"
   },
   {
     title: "This is the title",
     description: "This is a very long description about the title, This is a very long description about the title, This is a very long description about the title, This is a very long description about the title",
-    gif: "/gif-test.gif"
+    gif: "/splash/gif-test.gif"
   },
   {
     title: "This is the title",
     description: "This is a very long description about the title, This is a very long description about the title, This is a very long description about the title, This is a very long description about the title",
-    gif: "/gif-test.gif"
+    gif: "/splash/gif-test.gif"
   },
 ];
 

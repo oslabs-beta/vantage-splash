@@ -44,17 +44,19 @@ const NavBar = ({ scrollYProgress }) => {
       </Link>
 
       <div className={styles.containerRight}>
-        <a href='https://github.com/oslabs-beta/Vantage'>
+        <a href='https://github.com/oslabs-beta/Vantage' target="_blank" rel="noreferrer">
           <Button variant='outline' color='violet' className={styles.github}>
             Github
-            <div>
-              <AiOutlineStar /> {data?.stargazers_count}
-            </div>
+            {data?.stargazers_count && (
+              <div>
+                <AiOutlineStar /> {data.stargazers_count}
+              </div>
+            )}
           </Button>
         </a>
         <Button variant='outline' color='violet'>
           <Link href='/vantage_report_sample.html'>
-            <a>Example</a>
+            <a>Demo</a>
           </Link>
         </Button>
         <Button color='violet'>
