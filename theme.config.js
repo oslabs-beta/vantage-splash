@@ -11,9 +11,10 @@ const config = {
   search: true,
   customSearch: null, // customizable, you can use algolia for example
   darkMode: false,
-  footer: false,
-  footerText: `© Vantage 2022.`,
-  footerEditLink: `Edit this page on GitHub`,
+  // floatTOC: true,
+  footer: true,
+  footerText: '© Vantage 2022',
+  footerEditLink: '',
   logo: (
     <>
       <LogoSVG style={{ width: "50px" }} />
@@ -31,6 +32,7 @@ const config = {
         content='documentation about vantage SEO monitoring'
       />
       <meta name='og:title' content='Vantage: NEXTjs Optimization' />
+      <link rel='icon' href='/favicon.png' />
     </>
   ),
 };

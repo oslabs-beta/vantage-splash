@@ -16,9 +16,10 @@
 //   z-index: 30 !important;
 // }
 
-$main: #7100f3;
+// $main: #7100f3;
 
 .footer {
+  // position: fixed;
   font-size: .8rem;
   margin-top: 20px;
   display: flex;
@@ -27,4 +28,5 @@ $main: #7100f3;
   border-top: 1px solid #eaeaea;
   justify-content: flex-start;
   align-items: center;
+  z-index: 100;
 }
