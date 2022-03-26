@@ -19,7 +19,7 @@
   /* flex: 1; */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   /* justify-content: center; */
   align-items: center;
 }
@@ -43,13 +43,37 @@
   }
 }
 
+.nextContainer {
+  display: grid;
+  align-items: center;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 3fr;
+  h4 {
+    text-align: center;
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+  }
+}
+
+.nextContainer img {
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .nextContainer {
+    grid-gap: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 .title {
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
 }
 
-.title span {
+:is(.nextContainer, .title) span {
   color: #7100f3;
 }
 

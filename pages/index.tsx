@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Vantage</title>
+        <title>Vantage Homepage</title>
         <meta name='description' content='Vantage Homepage' />
         <link rel='icon' href='/favicon.png' />
       </Head>
@@ -64,6 +64,12 @@ const Home: NextPage = () => {
         <div>
           <h4>Features:</h4>
           <GifContainer />
+        </div>
+        <div className={styles.nextContainer}>
+          <h4>
+            Designed from the ground up to work seamlessly with <span>NEXTjs</span>
+          </h4>
+          <Image src='/splash/next.svg' layout='intrinsic' width={600} height={350} alt='' />
         </div>
         <div className={styles.cardContainer}>
           <h4>Meet the team!</h4>
