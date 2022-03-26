@@ -7,16 +7,16 @@ import { motion, useViewportScroll } from "framer-motion";
 import CardContainer from "../Containers/CardContainer";
 import GifContainer from "../Containers/GifContainer";
 import Features from "../Components/Features";
-import { useMediaQuery } from '@mantine/hooks';
+import { useMediaQuery } from "@mantine/hooks";
 import NavBar from "../Components/NavBar";
 
 const Home: NextPage = () => {
   const { scrollYProgress } = useViewportScroll();
-  const width545 = useMediaQuery('(min-width: 545px)');
+  const width545 = useMediaQuery("(min-width: 545px)");
   return (
     <div className={styles.container}>
       <Head>
-        <title>Vantage</title>
+        <title>Vantage Homepage</title>
         <meta name='description' content='Vantage Homepage' />
         <link rel='icon' href='/favicon.png' />
       </Head>
@@ -24,7 +24,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div className={styles.headerContainer}>
           <motion.h1
-            style={{maxWidth: "500px", margin: "auto"}}
+            style={{ maxWidth: "500px", margin: "auto" }}
             className={styles.title}
             initial={{ x: -600 }}
             animate={{ x: 0 }}
@@ -55,11 +55,21 @@ const Home: NextPage = () => {
               ? "npm install vantage-next --save-dev"
               : "npm i -D vantage-next"
           }
-          desc='Get started easily with npm and instantly start monitoring web vitals with each new commit'
-        />
+        >
+          <h5>
+            Get started easily with npm and instantly start monitoring web
+            vitals with each new commit
+          </h5>
+        </TerminalDisplay>
         <div>
           <h4>Features:</h4>
           <GifContainer />
+        </div>
+        <div className={styles.nextContainer}>
+          <h4>
+            Designed from the ground up to work seamlessly with <span>NEXTjs</span>
+          </h4>
+          <Image src='/splash/next.svg' layout='intrinsic' width={600} height={350} alt='' />
         </div>
         <div className={styles.cardContainer}>
           <h4>Meet the team!</h4>

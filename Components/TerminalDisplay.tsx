@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import { Browser } from "react-window-ui";
 import Typewriter from "typewriter-effect";
 import styles from "../styles/Terminal.module.scss";
@@ -8,10 +8,10 @@ import { Popover, Text } from "@mantine/core";
 
 interface TerminalProps {
   command: string;
-  desc: string;
+  children?: JSX.Element;
 }
 
-const TerminalDisplay = ({ command, desc }: TerminalProps) => {
+const TerminalDisplay = ({ command, children }: TerminalProps) => {
   const [termHover, setTermHover] = useState(false);
   const [copied, setCopied] = useState(false);
   return (
@@ -41,7 +41,6 @@ const TerminalDisplay = ({ command, desc }: TerminalProps) => {
             setTimeout((_) => setCopied(false), 1000);
             navigator.clipboard.writeText(command);
           }}
-          // whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.9 }}
         >
           <Popover
@@ -61,7 +60,7 @@ const TerminalDisplay = ({ command, desc }: TerminalProps) => {
           </Popover>
         </motion.div>
       </Browser>
-      <div>{desc}</div>
+      {children}
     </div>
   );
 };
