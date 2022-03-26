@@ -44,7 +44,11 @@ const NavBar = ({ scrollYProgress }) => {
       </Link>
 
       <div className={styles.containerRight}>
-        <a href='https://github.com/oslabs-beta/Vantage' target="_blank" rel="noreferrer">
+        <a
+          href='https://github.com/oslabs-beta/Vantage'
+          target='_blank'
+          rel='noreferrer'
+        >
           <Button variant='outline' color='violet' className={styles.github}>
             Github
             {data?.stargazers_count && (
@@ -54,16 +58,18 @@ const NavBar = ({ scrollYProgress }) => {
             )}
           </Button>
         </a>
-        <Button variant='outline' color='violet'>
-          <Link href='/vantage_report_sample.html'>
-            <a>Demo</a>
-          </Link>
-        </Button>
-        <Button color='violet'>
-          <Link href='/docs'>
-            <a>Docs</a>
-          </Link>
-        </Button>
+        <Link href='/vantage_report_sample.html'>
+          <a>
+            <Button variant='outline' color='violet'>
+              Demo
+            </Button>
+          </a>
+        </Link>
+        <Link href='/docs'>
+          <a>
+            <Button color='violet'>Docs</Button>
+          </a>
+        </Link>
       </div>
     </motion.div>
   );
