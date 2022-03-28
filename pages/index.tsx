@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Vantage Homepage</title>
+        <title>Vantage:  Developer tool for Next.js performance optimization</title>
         <meta name='description' content='Vantage Homepage' />
         <link rel='icon' href='/favicon.png' />
       </Head>
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
             animate={{ x: 0 }}
             transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
           >
-            NEXTjs Optimization with <span>Vantage</span>.
+            Next.js Performance Monitoring with <span>Vantage</span>.
           </motion.h1>
           <motion.div
             initial={{ x: 600 }}
