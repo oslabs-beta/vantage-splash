@@ -12,6 +12,13 @@ If your project does not already have a post-commit git hook in place, this will
 npx snapshot >&- 2>&- &
 ```
 
+## Running Vantage Without Git
+If you would like to run Vantage without commiting, run the following command in an unused terminal:
+
+```
+npx snapshot
+```
+
 ## Optional Configuration file
 The following fields can be configured based on the specifics of your project.  All values are optional (default values listed below).
 * **serverCommand**: The command that your project uses to start the serverCommand ```default: npm run start```
