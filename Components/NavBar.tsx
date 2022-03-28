@@ -1,27 +1,20 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/NavBar.module.scss";
 import LogoSVG from "./LogoSVG";
-import { Button, Group } from "@mantine/core";
+import { Button } from "@mantine/core";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import useSWR from "swr";
 import { AiOutlineStar } from "react-icons/ai";
-
-const fetcher = async (
-  input: RequestInfo,
-  init: RequestInit,
-  ...args: any[]
-) => {
-  const res = await fetch(input, init);
-  return res.json();
-};
 
 const NavBar = ({ scrollYProgress }) => {
   const [isStarted, setIsStarted] = useState(false);
-  const { data, error } = useSWR(
-    "https://api.github.com/repos/oslabs-beta/Vantage",
-    fetcher
-  );
+  const [stars, setStars] = useState(undefined)
+
+  useEffect(()=>{
+    fetch("https://api.github.com/repos/oslabs-beta/Vantage")
+      .then(data=>data.json())
+      .then(data=>setStars(data.stargazers_count))
+  },[])
 
   useEffect(
     () => scrollYProgress.onChange((v) => setIsStarted(v > 0)),
@@ -51,9 +44,9 @@ const NavBar = ({ scrollYProgress }) => {
         >
           <Button variant='outline' color='violet' className={styles.github}>
             Github
-            {data?.stargazers_count && (
+            {stars && (
               <div>
-                <AiOutlineStar /> {data.stargazers_count}
+                <AiOutlineStar /> {stars}
               </div>
             )}
           </Button>
