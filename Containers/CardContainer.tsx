@@ -1,9 +1,8 @@
 import TeamCard from "../Components/TeamCard";
 import styles from "../styles/CardContainer.module.scss";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
-const CardContainer = () => {
-  
+const CardContainer = () => {  
   return (
     <motion.div
       className={styles.container}

@@ -16,7 +16,9 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Vantage:  Developer tool for Next.js performance optimization</title>
+        <title>
+          Vantage: Developer tool for Next.js performance optimization
+        </title>
         <meta name='description' content='Vantage Homepage' />
         <link rel='icon' href='/favicon.png' />
       </Head>
@@ -33,17 +35,17 @@ const Home: NextPage = () => {
             Next.js Performance Monitoring with <span>Vantage</span>.
           </motion.h1>
           <motion.div
+            className={styles.dashboardImage}
             initial={{ x: 600 }}
             animate={{ x: 0 }}
             transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
           >
             <Image
-              width={1006}
-              height={601}
+              width={1550}
+              height={1162}
               layout='intrinsic'
               priority
-              // className={styles.screenshot1}
-              src='/splash/screenshot1.png'
+              src='/splash/dashboard-view.png'
               alt='Screenshot of Vantage'
             />
           </motion.div>
@@ -67,9 +69,16 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.nextContainer}>
           <h4>
-            Designed from the ground up to work seamlessly with <span>NEXTjs</span>
+            Designed from the ground up to work seamlessly with{" "}
+            <span>NEXTjs</span>
           </h4>
-          <Image src='/splash/next.svg' layout='intrinsic' width={600} height={350} alt='' />
+          <Image
+            src='/splash/next.svg'
+            layout='intrinsic'
+            width={600}
+            height={350}
+            alt=''
+          />
         </div>
         <div className={styles.cardContainer}>
           <h4>Meet the team!</h4>

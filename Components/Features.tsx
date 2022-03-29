@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "../styles/Features.module.scss";
-import { BsFillCheckSquareFill } from "react-icons/bs";
 import { BiGitBranch } from "react-icons/bi";
-import { MdOutlinePublishedWithChanges } from "react-icons/md";
-import { FaFeatherAlt } from "react-icons/fa";
+import { MdCompare } from "react-icons/md";
+import { RiRouteLine } from "react-icons/ri";
 
 import { motion } from "framer-motion";
 
@@ -47,16 +46,16 @@ const cardData = [
   {
     title: "Clear Comparisons",
     desc: "See exactly which recommendations changed from one commit to the next, and how your updates have directly influenced metrics",
-    icon: <MdOutlinePublishedWithChanges />,
+    icon: <MdCompare />,
     color: "#673AB6",
     backgroundColor: "#EDE7F6",
   },
   {
     title: "Automatic Project Traversal",
     desc: "Designed for the structure of Next.js projects, Vantage will detect and traverse all endpoints of your project to automatically gather data with minimal setup",
-    icon: <FaFeatherAlt />,
+    icon: <RiRouteLine />,
     color: "#00C852",
-    backgroundColor: "#B9F6C9",
+    backgroundColor: "#c8f7d5",
   },
 ];
 
