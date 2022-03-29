@@ -29,14 +29,22 @@
   display: grid;
   align-items: center;
   gap: 2rem;
-  grid-template-columns: 430px minmax(400px, 1fr);
+  grid-template-columns: 430px minmax(500px, 600px);
+}
+
+.dashboardImage {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  border-radius: .5rem;
+
 }
 
 .headerContainer img {
+  padding: 10px;
   border-radius: 0.5rem;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1050px) {
   .headerContainer {
     display: grid;
     grid-template-columns: 1fr;

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styles from "../styles/GifContainer.module.scss";
 import { motion } from "framer-motion";
 
+
 const GifContainer = () => {
   const [section, setSection] = useState(0);
   const sectionComponents = sections.map(({ title, description }, i) => (
@@ -20,7 +21,7 @@ const GifContainer = () => {
     </motion.div>
   ));
 
-  const imageComponents = sections.map(({gif}, i) => (
+  const imageComponents = sections.map(({ gif, width, height }, i) => (
     <motion.div
       key={i}
       initial={{ opacity: 0, x: 200 }}
@@ -32,8 +33,8 @@ const GifContainer = () => {
           priority={i === 0 ? true : false}
           className={styles.image}
           src={gif}
-          width={474}
-          height={246}
+          width={width}
+          height={height}
           layout='intrinsic'
           alt='alt'
         />
@@ -51,20 +52,29 @@ const GifContainer = () => {
 
 const sections = [
   {
-    title: "This is the title",
-    description: "This is a very long description about the title, This is a very long description about the title, This is a very long description about the title, This is a very long description about the title",
-    gif: "/splash/gif-test.gif"
+    title: "Compare Commit Results",
+    description:
+      "Easily compare progress made between commits by selecting them on the graph. Then all the suggestions will display the difference in order of importance.",
+    gif: "/splash/toggle-range.gif",
+    width: 600,
+    height: 431,
   },
   {
-    title: "This is the title",
-    description: "This is a very long description about the title, This is a very long description about the title, This is a very long description about the title, This is a very long description about the title",
-    gif: "/splash/gif-test.gif"
+    title: "Choose Endpoints",
+    description:
+      "Quickly switch between all the endpoints in your site to efficiently track web vitals and suggestions throughout your app.",
+    gif: "/splash/endpoint-select.gif",
+    width: 600,
+    height: 431,
   },
-  {
-    title: "This is the title",
-    description: "This is a very long description about the title, This is a very long description about the title, This is a very long description about the title, This is a very long description about the title",
-    gif: "/splash/gif-test.gif"
-  },
+  // {
+  //   title: "Choose Endpoints",
+  //   description:
+  //     "Quickly switch between all the endpoints in your site to efficiently track web vitals and suggestions throughout your app.",
+  //   gif: "/splash/endpoint-select.gif",
+  //   width: 600,
+  //   height: 431,
+  // },
 ];
 
 export default GifContainer;
