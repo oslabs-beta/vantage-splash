@@ -1,7 +1,7 @@
 # About Google Lighthouse
 
 ### What is Google Lighthouse?
+Google Lighthouse is an industry standard web performance monitoring tool, allowing developers to understand performance of their site across several key metric categories.  Read more about it <a href="https://developers.google.com/web/tools/lighthouse">here</a>.
 
 ### How does Vantage capture Google Lighthouse Metrics?
-
-### What is the advantage of using Vantage instead of using Lighthouse directly?
+Vantage runs Google lighthouse locally on your machine, and is ideal for projects where you may not have a full CI/CI pipeline in place but still want quick and easy access to performance over time.  Vantage collects metrics for each commit, stores them within your project, and caches the 10 most recent commits to capture changes over time.  When you commit, Vantage will run in the background to launch your project, initiate a headless Chrome session, and collect metrics.  This will be saved within your project and you can leverage the reporting to identify key changes.

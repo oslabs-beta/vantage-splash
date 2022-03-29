@@ -1,0 +1,30 @@
+# Troubleshooting Guide
+
+## Error Logging
+Results will be logged to the ```./vantage/log_history.log``` file in your project's root directory.  If you experience any issues at runtime, look here first to see where execution was interrupted.
+
+## Git Integration Issues
+
+### Git Hooks
+Vantage uses git hooks to run in the background with every commit. The post-commit hook is used and can be found at `./git/hooks/post-commit` from the root directory of your Next.js app.
+At the time of install, Vantage adds a post-commit script to your ```.git/hooks``` folder, however, if a post-commit script already exists it will not override it.
+
+### Create new post-commit hook
+To manually add the post-commit hook to your project, navigate to ```.git/hooks/``` and create a file named `post-commit`. 
+
+Add the following contents to the folder:
+```
+#!/bin/sh
+npx snapshot >&- 2>&- &
+```
+Finally run `chmod u+x ./git/hooks/post-commit` in your terminal to make the post-commit file executable.
+
+### Add to existing post-commit
+
+If you already have a post-commit git hook script in use, just add the following executable to it:
+```
+npx snapshot >&- 2>&- &
+```
+
+## Found an issue?
+Check the <a href="https://github.com/oslabs-beta/Vantage/issues">issues</a> section on GitHub, or submit a <a href="https://github.com/oslabs-beta/Vantage/issues/new">new issue</a>.
