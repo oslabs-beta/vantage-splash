@@ -9,6 +9,7 @@ import GifContainer from "../Containers/GifContainer";
 import Features from "../Components/Features";
 import { useMediaQuery } from "@mantine/hooks";
 import NavBar from "../Components/NavBar";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const { scrollYProgress } = useViewportScroll();
@@ -34,21 +35,25 @@ const Home: NextPage = () => {
           >
             Next.js Performance Monitoring with <span>Vantage</span>.
           </motion.h1>
-          <motion.div
-            className={styles.dashboardImage}
-            initial={{ x: 600 }}
-            animate={{ x: 0 }}
-            transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
-          >
-            <Image
-              width={1550}
-              height={1162}
-              layout='intrinsic'
-              priority
-              src='/splash/dashboard-view.png'
-              alt='Screenshot of Vantage'
-            />
-          </motion.div>
+          <Link href='/vantage_report_sample.html'>
+            <a>
+              <motion.div
+                className={styles.dashboardImage}
+                initial={{ x: 600 }}
+                animate={{ x: 0 }}
+                transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
+              >
+                <Image
+                  width={1550}
+                  height={1162}
+                  layout='intrinsic'
+                  priority
+                  src='/splash/dashboard-view.png'
+                  alt='Screenshot of Vantage'
+                />
+              </motion.div>
+            </a>
+          </Link>
         </div>
         <Features />
         <TerminalDisplay

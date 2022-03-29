@@ -36,7 +36,12 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: flex;
   border-radius: .5rem;
+  cursor: pointer;
+  transition: box-shadow .2s;
+}
 
+.dashboardImage:hover {
+  box-shadow: rgba(100, 100, 111, 0.776) 0px 7px 29px 0px;
 }
 
 .headerContainer img {

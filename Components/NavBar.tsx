@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/NavBar.module.scss";
 import LogoSVG from "./LogoSVG";
-import { Button } from "@mantine/core";
+import { Button, Tooltip } from "@mantine/core";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { AiOutlineStar } from "react-icons/ai";
 
 const NavBar = ({ scrollYProgress }) => {
   const [isStarted, setIsStarted] = useState(false);
-  const [stars, setStars] = useState(undefined)
+  const [stars, setStars] = useState(undefined);
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch("https://api.github.com/repos/oslabs-beta/Vantage")
-      .then(data=>data.json())
-      .then(data=>setStars(data.stargazers_count))
-  },[])
+      .then((data) => data.json())
+      .then((data) => setStars(data.stargazers_count));
+  }, []);
 
   useEffect(
     () => scrollYProgress.onChange((v) => setIsStarted(v > 0)),
@@ -51,13 +51,24 @@ const NavBar = ({ scrollYProgress }) => {
             )}
           </Button>
         </a>
-        <Link href='/vantage_report_sample.html'>
-          <a>
-            <Button variant='outline' color='violet'>
-              Demo
-            </Button>
-          </a>
-        </Link>
+        <Tooltip
+          label='View a sample Vantage report'
+          withArrow
+          color='violet'
+          position='bottom'
+          arrowSize={3}
+          transition='slide-up'
+          transitionDuration={200}
+          transitionTimingFunction='ease'
+        >
+          <Link href='/vantage_report_sample.html'>
+            <a>
+              <Button variant='outline' color='violet'>
+                Demo
+              </Button>
+            </a>
+          </Link>
+        </Tooltip>
         <Link href='/docs'>
           <a>
             <Button color='violet'>Docs</Button>
