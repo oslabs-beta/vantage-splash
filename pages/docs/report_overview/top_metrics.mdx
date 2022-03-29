@@ -1,12 +1,22 @@
-# Key Lighthouse Metrics
+# Understanding The Metrics
+
+## Key Lighthouse Metrics
 
 Below is a summary of each of the key top level metric categories:
 * **Performance** | Identifies areas that may lead to slow performance or reduced responsiveness, such as large images.
 * **Accessibility** | Analyzes performance against accessibility best practices, including compatibility with assistive technology. 
 * **Best Practices** | Recommendations against the best practices in modern web development.
 * **SEO** | Highlights potential improvements to improve search engine performance.
-* **Progressive Web App** | Key metrics that ensure you have a high-performing progressive web app.
 
 In the vantage_report.html file, you can select two points on the graph, then hover over the list of recommendations to see further detail on each.
 
 For a detailed analysis of how Google Lighthouse computes your project's score, we recommend this <a href="https://web.dev/performance-scoring/">article</a>.
+
+## Key Web Vitals
+
+* **First Contentful Paint ([FCP](https://web.dev/first-contentful-paint/))** | The time at which the first text or image is painted.
+* **Time to Interactive ([TTI](https://web.dev/interactive/))** | The amount of time it takes for the page to become fully interactive.
+* **Speed Index ([SI](https://web.dev/speed-index/))** | How quickly the contents of a page are visibly populated.
+* **Total Blocking Time ([TBT](https://web.dev/lighthouse-total-blocking-time/))** | Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds.
+* **Largest Contentful Paint ([LCP](https://web.dev/lighthouse-largest-contentful-paint/))** | The time at which the largest text or image is painted.
+* **Cumulative Layout Shift ([CLS](https://web.dev/cls/))** | The movement of visible elements within the viewport.
