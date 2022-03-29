@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import styles from "../styles/GifContainer.module.scss";
 import { motion } from "framer-motion";
 
-
 const GifContainer = () => {
   const [section, setSection] = useState(0);
   const sectionComponents = sections.map(({ title, description }, i) => (
@@ -21,7 +20,7 @@ const GifContainer = () => {
     </motion.div>
   ));
 
-  const imageComponents = sections.map(({ gif, width, height }, i) => (
+  const imageComponents = sections.map(({ gif }, i) => (
     <motion.div
       key={i}
       initial={{ opacity: 0, x: 200 }}
@@ -30,11 +29,11 @@ const GifContainer = () => {
     >
       {section === i && (
         <Image
-          priority={i === 0 ? true : false}
+          // priority={i === 0 ? true : false}
           className={styles.image}
           src={gif}
-          width={width}
-          height={height}
+          width={600}
+          height={431}
           layout='intrinsic'
           alt='alt'
         />
@@ -54,27 +53,21 @@ const sections = [
   {
     title: "Compare Commit Results",
     description:
-      "Easily compare progress made between commits by selecting them on the graph. Then all the suggestions will display the difference in order of importance.",
+      "Easily compare progress made between commits by selecting them on the graph. Review a prioritize list of suggestions.",
     gif: "/splash/toggle-range.gif",
-    width: 600,
-    height: 431,
   },
   {
     title: "Choose Endpoints",
     description:
       "Quickly switch between all the endpoints in your site to efficiently track web vitals and suggestions throughout your app.",
     gif: "/splash/endpoint-select.gif",
-    width: 600,
-    height: 431,
   },
-  // {
-  //   title: "Choose Endpoints",
-  //   description:
-  //     "Quickly switch between all the endpoints in your site to efficiently track web vitals and suggestions throughout your app.",
-  //   gif: "/splash/endpoint-select.gif",
-  //   width: 600,
-  //   height: 431,
-  // },
+  {
+    title: "Breakdown Performance Metrics",
+    description:
+      "View a breakdown of performance metrics, and compare them by selecting the metric you would like to deep dive further.",
+    gif: "/splash/tbt-fcp.gif",
+  },
 ];
 
 export default GifContainer;
