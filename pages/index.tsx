@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import TerminalDisplay from "../Components/TerminalDisplay";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -14,7 +14,7 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
   const { scrollYProgress } = useViewportScroll();
-  
+
   const width545 = useMediaQuery("(min-width: 545px)");
   return (
     <div className={styles.container}>
@@ -22,6 +22,16 @@ const Home: NextPage = () => {
         <title>
           Vantage: Developer tool for Next.js performance optimization
         </title>
+        <meta property='og:title' content='Vantage' />
+        <meta property='og:type' content='Bring optimization into focus for Next.js App' />
+        <meta
+          property='og:url'
+          content='https://vantagenext.com/'
+        />
+        <meta
+          property='og:image'
+          content='https://vantagenext.com/favicon.png'
+        />
         <meta name='description' content='Vantage Homepage' />
         <link rel='icon' href='/favicon.png' />
       </Head>
