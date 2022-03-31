@@ -20,34 +20,39 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>
-          Vantage: Developer tool for Next.js performance optimization
+          Vantage | Next.js Optimization
         </title>
-        <meta name="description" content="Developer tool for Next.js performance optimization" />
-        <meta property='og:title' content='Vantage' />
-        <meta property='og:type' content='Developer tool for Next.js performance optimization' />
-        <meta property="og:site_name" content="Vantage" />
-        <meta property="og:type" content="website" />
         <meta
-          property='og:url'
-          content='https://vantagenext.com/'
+          name='description'
+          content='Developer tool for Next.js performance optimization. Analyze key web metrics in the background with every commit!'
         />
+        <meta property='og:title' content='Vantage' />
+        <meta
+          property='og:type'
+          content='Developer tool for Next.js performance optimization. Analyze key web metrics in the background with every commit!'
+        />
+        <meta property='og:site_name' content='Vantage' />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://vantagenext.com/' />
         <meta
           property='og:image'
           content='https://vantagenext.com/openGraph.png'
         />
-        
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:title' content='Vantage' />
         <meta
           name='twitter:description'
-          content='Developer tool for Next.js performance optimization'
+          content='Developer tool for Next.js performance optimization. Analyze key web metrics in the background with every commit!'
         />
         <meta
           name='twitter:image'
           content='https://vantagenext.com/openGraphSquare.png'
         />
 
-        <meta name='description' content='Vantage Homepage' />
+        <meta name='description' content='Developer tool for Next.js performance optimization. Analyze key web metrics in the background with every commit!' />
         <link rel='icon' href='/favicon.png' />
       </Head>
       <NavBar scrollYProgress={scrollYProgress} />
