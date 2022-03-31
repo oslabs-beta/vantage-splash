@@ -35,6 +35,18 @@ const Home: NextPage = () => {
           property='og:image'
           content='https://vantagenext.com/openGraph.png'
         />
+        
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:title' content='Vantage' />
+        <meta
+          name='twitter:description'
+          content='Developer tool for Next.js performance optimization'
+        />
+        <meta
+          name='twitter:image'
+          content='https://vantagenext.com/openGraphSquare.png'
+        />
+
         <meta name='description' content='Vantage Homepage' />
         <link rel='icon' href='/favicon.png' />
       </Head>
