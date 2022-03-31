@@ -22,15 +22,18 @@ const Home: NextPage = () => {
         <title>
           Vantage: Developer tool for Next.js performance optimization
         </title>
+        <meta name="description" content="Developer tool for Next.js performance optimization" />
         <meta property='og:title' content='Vantage' />
-        <meta property='og:type' content='Bring optimization into focus for Next.js App' />
+        <meta property='og:type' content='Developer tool for Next.js performance optimization' />
+        <meta property="og:site_name" content="Vantage" />
+        <meta property="og:type" content="website" />
         <meta
           property='og:url'
           content='https://vantagenext.com/'
         />
         <meta
           property='og:image'
-          content='https://vantagenext.com/favicon.png'
+          content='https://vantagenext.com/openGraph.jpeg'
         />
         <meta name='description' content='Vantage Homepage' />
         <link rel='icon' href='/favicon.png' />
