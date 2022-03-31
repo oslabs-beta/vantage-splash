@@ -1,18 +1,19 @@
 import Head from "next/head";
+import Script from "next/script";
 import "nextra-theme-docs/style.css";
 import "../styles/globals.scss";
 
 export default function Nextra({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-ZCQ52NTSKF`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=G-ZCQ52NTSKF`}
+      />
+      <Script
+        id={"google-analytics"}
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -20,9 +21,8 @@ export default function Nextra({ Component, pageProps }) {
               page_path: window.location.pathname,
             });
           `,
-          }}
-        />
-      </Head>
+        }}
+      />
       <Component {...pageProps} />
     </>
   );
