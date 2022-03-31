@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         />
         <meta
           property='og:image'
-          content='https://vantagenext.com/openGraph.jpeg'
+          content='https://vantagenext.com/openGraph.png'
         />
         <meta name='description' content='Vantage Homepage' />
         <link rel='icon' href='/favicon.png' />
