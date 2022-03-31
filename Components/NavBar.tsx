@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/NavBar.module.css";
+import styles from "../styles/NavBar.module.scss";
 import LogoSVG from "./LogoSVG";
-import { Button } from "evergreen-ui";
+import { Button, Tooltip } from "@mantine/core";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { AiOutlineStar } from "react-icons/ai";
 
 const NavBar = ({ scrollYProgress }) => {
   const [isStarted, setIsStarted] = useState(false);
+  const [stars, setStars] = useState(undefined);
+
+  useEffect(() => {
+    fetch("https://api.github.com/repos/oslabs-beta/Vantage")
+      .then((data) => data.json())
+      .then((data) => setStars(data.stargazers_count));
+  }, []);
+
   useEffect(
-    () => scrollYProgress.onChange((v) => setIsStarted(v >= 0.05)),
+    () => scrollYProgress.onChange((v) => setIsStarted(v > 0)),
     [scrollYProgress]
   );
   return (
@@ -20,27 +29,51 @@ const NavBar = ({ scrollYProgress }) => {
           : "0 0 20px rgba(0, 0, 0, 0)",
       }}
     >
-      <Link href='/' >
+      <Link href='/'>
         <a className={styles.containerLeft}>
           <LogoSVG className={styles.svg} />
-          <h3>Vantage</h3>
+          <div className={styles.name}>Vantage</div>
         </a>
       </Link>
 
       <div className={styles.containerRight}>
-        <Button>
-          <a href='https://github.com/oslabs-beta/Vantage'>Github</a>
-        </Button>
-        <Button>
+        <a
+          href='https://github.com/oslabs-beta/Vantage'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <Button variant='outline' color='violet' className={styles.github}>
+            Github
+            {stars && (
+              <div>
+                <AiOutlineStar /> {stars}
+              </div>
+            )}
+          </Button>
+        </a>
+        <Tooltip
+          label='View a sample Vantage report'
+          withArrow
+          color='violet'
+          position='bottom'
+          arrowSize={3}
+          transition='slide-up'
+          transitionDuration={200}
+          transitionTimingFunction='ease'
+        >
           <Link href='/vantage_report_sample.html'>
-            <a>Example</a>
+            <a>
+              <Button variant='outline' color='violet'>
+                Demo
+              </Button>
+            </a>
           </Link>
-        </Button>
-        <Button appearance='primary'>
-          <Link href='/docs'>
-            <a>Docs</a>
-          </Link>
-        </Button>
+        </Tooltip>
+        <Link href='/docs'>
+          <a>
+            <Button color='violet'>Docs</Button>
+          </a>
+        </Link>
       </div>
     </motion.div>
   );

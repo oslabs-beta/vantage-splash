@@ -1,0 +1,134 @@
+.container {
+  width: 100%;
+  overflow-x: hidden;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.container :is(h4, h5) {
+  margin: 0;
+}
+
+.main {
+  padding-top: 80px;
+  margin: 0 10vw;
+  /* min-height: 100vh; */
+  /* padding: 4rem 0; */
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.headerContainer {
+  margin: 0 2rem;
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  grid-template-columns: 430px minmax(500px, 600px);
+}
+
+.dashboardImage {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: box-shadow .2s;
+}
+
+.dashboardImage:hover {
+  box-shadow: rgba(100, 100, 111, 0.776) 0px 7px 29px 0px;
+}
+
+.headerContainer img {
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  .headerContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.nextContainer {
+  display: grid;
+  align-items: center;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 3fr;
+  h4 {
+    text-align: center;
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+  }
+}
+
+.nextContainer img {
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .nextContainer {
+    grid-gap: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .main {
+    margin: 0 5vw;
+  }
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+:is(.nextContainer, .title) span {
+  color: #7100f3;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+/* @media only screen and (max-width: 1000px) {
+  .cardContainer > h4 {
+    transform: translateX(0%);
+  }
+} */
+
+.footer {
+  font-size: .8rem;
+  margin-top: 20px;
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+  border-top: 1px solid #eaeaea;
+  justify-content: flex-start;
+  align-items: center;
+}
