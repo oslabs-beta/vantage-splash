@@ -80,6 +80,12 @@
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .main {
+    margin: 0 5vw;
+  }
+}
+
 .title {
   margin: 0;
   line-height: 1.15;

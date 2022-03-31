@@ -1,3 +1,4 @@
+import React from 'react'
 import TerminalDisplay from "../Components/TerminalDisplay";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -13,6 +14,7 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
   const { scrollYProgress } = useViewportScroll();
+  
   const width545 = useMediaQuery("(min-width: 545px)");
   return (
     <div className={styles.container}>
@@ -75,7 +77,7 @@ const Home: NextPage = () => {
         <div className={styles.nextContainer}>
           <h4>
             Designed from the ground up to work seamlessly with{" "}
-            <span>NEXTjs</span>
+            <span>Next.js</span>
           </h4>
           <Image
             src='/splash/next.svg'
