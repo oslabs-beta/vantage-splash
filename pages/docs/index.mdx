@@ -18,6 +18,7 @@ The following fields can be configured based on the specifics of your project.  
 * **buildCommand**: The command that your project uses to initiate a build ```default: npm run build```
 * **port**: Port where you would like the project to be launched.  If you use a custom server command, that will take precedence.  ```default: 3500```
 * **endpoints**: List any additional endpoints that should be tested.  The pages directory will be automatically traversed and included by default, but this is available to support testing of any dynamic endpoints.
+* **srcDirectory**: If your /pages folder is inside a /src/ directory, set this to true.  Otherwise Vantage will look for /pages/ directly in the root directory.
 
 Save the following as ```/vantage/vantage_config.json``` in project's root directory:
 ```
@@ -26,7 +27,8 @@ Save the following as ```/vantage/vantage_config.json``` in project's root direc
     "serverCommand" : "npm run start",
     "buildCommand" : "npm run build",
     "port" : "3000",
-    "endpoints" : []
+    "endpoints" : [],
+    "srcDirectory" : "true"
   }
 }
 ```
